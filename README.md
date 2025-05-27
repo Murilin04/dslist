@@ -150,3 +150,13 @@ POST	/lists/{listId}/replacement	Reorganiza a ordem dos jogos em uma coleção
     "destinationIndex": 1
 }
 ```
+#### 📚 Créditos
+Projeto baseado no treinamento Intensivão Java com Spring Boot da DevSuperior, com o professor Nélio Alves.
+
+#### 🧾 Licença
+Este projeto é de uso educacional e pessoal.
+
+#### 👨‍💻 Autor
+Desenvolvido por Murilin04
+🔗 LinkedIn
+
