@@ -1,0 +1,44 @@
+.home {
+  background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(34, 163, 199, 1) 31%, rgba(19, 4, 184, 1) 94%);
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  padding: 0 15%;
+}
+
+.home__container-titulo-pro {
+  color: 000000;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.home__container-titulo {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 60px;
+  padding-bottom: 48px;
+  margin: 0;
+}
+
+.home__container-texto {
+  color: #FFFFFF;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 500;
+  margin-bottom: 48px;
+}
+
+.home__container-button {
+  padding: 10px 40%;
+  color:   #00DDDD;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  line-height: 36px;
+  font-size: 24px;
+  background-color: #0F2424;
+  border-radius: 10px;
+  border: none;
+}
