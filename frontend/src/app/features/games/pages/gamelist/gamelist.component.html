@@ -1,1 +1,20 @@
-<p>gamelist works!</p>
+<div class="container">
+  <div class="container-list">
+    <h2 class="container-title">{{ listName }}</h2>
+    <ul>
+      <li *ngFor="let game of games">
+        <a [routerLink]="['/lists',  game.id]">
+          <div class="game-item">
+            <img src="{{ game.imgUrl }}" alt="{{ game.title }}" />
+            <div class="game-info">
+              <h2>{{ game.title }}</h2>
+              <span class="desc">{{ game.shortDescription }}</span>
+              <span class="year">{{ game.year }}</span>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+

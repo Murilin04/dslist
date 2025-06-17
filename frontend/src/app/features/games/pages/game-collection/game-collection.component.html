@@ -1,1 +1,10 @@
-<p>game-collection works!</p>
+<div class="app-container">
+  <div class="container">
+    <h2>Minhas coleções</h2>
+    <ul>
+      <li *ngFor="let list of lists">
+        <a [routerLink]="['/lists', list.id, 'games']">{{ list.name }}</a>
+      </li>
+    </ul>
+  </div>
+</div>
