@@ -11,7 +11,6 @@ import { Game } from '../../models/game.model';
   styleUrl: './game.component.css'
 })
 export class GameComponent {
-    gameId: number | undefined;
     games: Game[] = [];
 
    constructor(private gameService: GameService,
@@ -24,7 +23,6 @@ export class GameComponent {
     const gameId = this.route.snapshot.paramMap.get('id');
     if (gameId) {
       this.gameService.getGame(gameId).subscribe(game => {
-        this.gameId = game.id;
         this.games = [game];
       });
     }

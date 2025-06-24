@@ -3,6 +3,8 @@ import { inject, Injectable } from '@angular/core';
 import { GameList } from '../models/game-list.model';
 import { GameMin } from '../models/game-min.model';
 import { Game } from '../models/game.model';
+import { Observable } from 'rxjs';
+import { ReplacementDTO } from '../models/replacementDTO';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +25,15 @@ export class GameService {
 
   getGame(gameId: string) {
     return this.http.get<Game>(`${this.API}/games/${gameId}`);
+  }
+
+  moveGame(listId: number, sourceIndex: number, destinationIndex: number): Observable<void> {
+    const body: ReplacementDTO = {
+      sourceIndex,
+      destinationIndex
+    };
+
+    return this.http.post<void>(`${this.API}/lists/${listId}/replacement`, body);
   }
 
 }

@@ -16,7 +16,9 @@
   background-color: #ffffff;
   border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0 2px 8px rgba(18, 18, 18, 0.1);
+  box-shadow: 0 2px 8px rgba(18, 18, 18, 18);
+  max-width: 70%;
+  margin-left: 10%;
 }
 
 .game-item img {
@@ -50,11 +52,15 @@
 }
 
 .game-info {
-  margin-top: 0.5rem;
   background-color:  #ffffff;
   border-radius: 0 0 8px 8px;
   padding: 1rem;
   color: #333;
   margin-top: -0.5rem;
+  max-width: 70%;
+  margin-left: 10%;
 }
 
+li {
+  list-style: none;
+}

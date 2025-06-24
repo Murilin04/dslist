@@ -1,8 +1,8 @@
 <div class="container">
-  <div class="container-list">
+  <div cdkDropList class="container-list" (cdkDropListDropped)="drop($event)">
     <h2 class="container-title">{{ listName }}</h2>
     <ul>
-      <li *ngFor="let game of games">
+      <li *ngFor="let game of games" cdkDrag>
         <a [routerLink]="['/lists', listId, 'games', game.id]">
           <div class="game-item">
             <img src="{{ game.imgUrl }}" alt="{{ game.title }}" />
