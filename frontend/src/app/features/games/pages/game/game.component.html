@@ -1,0 +1,23 @@
+<div class="container">
+  <ul>
+    <li *ngFor="let game of games">
+        <div class="game-item">
+          <img src="{{ game.imgUrl }}" alt="{{ game.title }}" />
+
+          <div class="game-details">
+            <span class="year">{{ game.year }}</span>
+            <h2>{{ game.title }}</h2>
+            <p><strong>Genre:</strong> {{ game.genre }}</p>
+            <p><strong>Platforms:</strong> {{ game.platforms }}</p>
+            <p><strong>Score:</strong> {{ game.score }}</p>
+          </div>
+
+        </div>
+
+        <div class="game-info">
+          <span class="desc">{{ game.longDescription }}</span>
+        </div>
+    </li>
+  </ul>
+</div>
+

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { GameList } from '../models/game-list.model';
 import { GameMin } from '../models/game-min.model';
+import { Game } from '../models/game.model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,4 +20,9 @@ export class GameService {
   getGamesByListId(listId: string) {
     return this.http.get<GameMin[]>(`${this.API}/lists/${listId}/games`);
   }
+
+  getGame(gameId: string) {
+    return this.http.get<Game>(`${this.API}/games/${gameId}`);
+  }
+
 }

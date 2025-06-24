@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { GameMin } from '../../models/game-min.model';
 import { GameService } from '../../services/game.service';
-import { GameList } from '../../models/game-list.model';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -15,6 +14,7 @@ import { ActivatedRoute } from '@angular/router';
 export class GamelistComponent {
   games: GameMin[] = [];
   listName = '';
+  listId: number | undefined;
 
   constructor(private gameService: GameService,
               private route: ActivatedRoute
@@ -25,11 +25,12 @@ export class GamelistComponent {
   ngOnInit(): void {
     const listId = this.route.snapshot.paramMap.get('id');
     if (listId) {
-      // Buscar nome da lista
+      // Buscar nome da lista e id
       this.gameService.getGameList().subscribe(lists => {
         const lista = lists.find(list => String(list.id) === listId);
         if (lista) {
           this.listName = lista.name;
+          this.listId = lista.id;
         }
       });
       // Buscar games da lista
