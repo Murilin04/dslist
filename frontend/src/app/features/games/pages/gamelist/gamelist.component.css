@@ -1,24 +1,24 @@
 .container {
   background-image: url('/assets/img/background.png');
-  background-size: cover;        /* Faz a imagem cobrir toda a área */
-  background-position: center;   /* Centraliza a imagem */
-  background-repeat: no-repeat;  /* Evita repetição */
-  min-height: 93.2vh;             /* Garante que ocupe 100% da altura da tela */
-  align-items: center;           /* Centraliza verticalmente (opcional) */
+  background-size: 100% 100%;        /* Faz a imagem cobrir toda a área */
   padding: 2rem;                 /* Espaço interno para não colar nas bordas */
-  box-sizing: border-box;
 }
 
 .container-title {
   text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.5);
   font-size: 2rem;
+  font-family: 'rubik', sans-serif;
   padding-left: 2.5rem;
   color: #ffffff;
 }
 
 .container-list {
-  background: linear-gradient(90deg, #282241 0%, #34BDAD 50%, #4EADC7 80%,  #E6B57E 100%);
-  background-color: rgba(124, 20, 137, 0.9); /* fallback para navegadores antigos */
+  background: linear-gradient(
+  90deg,
+  rgba(40, 34, 65, 0.2) 0%,     /* 0.2 = 20% de opacidade */
+  rgba(52, 189, 173, 0.2) 50%,
+  rgba(78, 173, 199, 0.2) 80%,
+  rgba(230, 181, 126, 0.2) 100%);
   border-radius: 8px;
   padding: 1rem 2rem;
   margin: 2rem auto;
@@ -54,7 +54,7 @@ a {
 .game-info h2 {
   margin: 0 0 0.5rem 0;
   font-size: 1.4rem;
-  color:rebeccapurple;
+  color: rebeccapurple;
 }
 
 .game-info .desc {

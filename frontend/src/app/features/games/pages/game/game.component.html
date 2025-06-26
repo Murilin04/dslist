@@ -9,7 +9,14 @@
             <h2>{{ game.title }}</h2>
             <p><strong>Genre:</strong> {{ game.genre }}</p>
             <p><strong>Platforms:</strong> {{ game.platforms }}</p>
-            <p><strong>Score:</strong> {{ game.score }}</p>
+
+            <div class="stars">
+              <ng-container *ngFor="let star of getStars(game.score)">
+                <mat-icon *ngIf="star === 'completa'">star</mat-icon>
+                <mat-icon *ngIf="star === 'metade'">star_half</mat-icon>
+                <mat-icon *ngIf="star === 'vazia'">star_border</mat-icon>
+              </ng-container>
+            </div>
           </div>
 
         </div>

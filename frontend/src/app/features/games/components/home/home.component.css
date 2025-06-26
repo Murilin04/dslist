@@ -1,11 +1,18 @@
 .home {
-  background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(34, 163, 199, 1) 31%, rgba(19, 4, 184, 1) 94%);
+  background-image: url('/assets/img/home.png');
+  background-size: 100% 100%;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
   padding: 0 15%;
+}
+
+.home__container {
+  background: rgba(0, 0, 0, 0.5); /* opcional: fundo semi-transparente para melhorar a leitura */
+  padding: 30px;
+  border-radius: 8px;
 }
 
 .home__container-titulo-pro {
@@ -17,7 +24,6 @@
 
 .home__container-titulo {
   color: #FFFFFF;
-  font-weight: bold;
   font-size: 60px;
   padding-bottom: 48px;
   margin: 0;

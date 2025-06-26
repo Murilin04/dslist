@@ -1,13 +1,10 @@
 .container {
   display: flex;
   background-image: url('/assets/img/background.png');
-  background-size: cover;        /* Faz a imagem cobrir toda a área */
-  background-position: center;   /* Centraliza a imagem */
-  background-repeat: no-repeat;  /* Evita repetição */
-  min-height: 93.2vh;             /* Garante que ocupe 100% da altura da tela */
+  background-size: 100% 100%;
+  min-height: 72.4vh;             /* Garante que ocupe 100% da altura da tela */
   align-items: center;           /* Centraliza verticalmente (opcional) */
-  padding: 2rem;                 /* Espaço interno para não colar nas bordas */
-  box-sizing: border-box;
+  padding: 5rem;                 /* Espaço interno para não colar nas bordas */
 }
 
 .game-item {
@@ -42,13 +39,17 @@
 
 .game-details p,
 .game-details span {
-  margin: 0.2rem 0;
-  color: #333;
+  margin: 0.5rem 0;
+}
+
+.game-details p strong {
+  color:rebeccapurple;
 }
 
 .year {
   font-size: 1rem;
   font-weight: bold;
+  color:rebeccapurple;
 }
 
 .game-info {
@@ -63,4 +64,9 @@
 
 li {
   list-style: none;
+}
+
+.stars {
+  font-size: 3rem;
+  color: gold;
 }

@@ -1,12 +1,8 @@
 .app-container {
-  background-image: url('/assets/img/background.png');
-  background-size: cover;        /* Faz a imagem cobrir toda a área */
-  background-position: center;   /* Centraliza a imagem */
-  background-repeat: no-repeat;  /* Evita repetição */
-  min-height: 93.2vh;             /* Garante que ocupe 100% da altura da tela */
-  align-items: center;           /* Centraliza verticalmente (opcional) */
+  background-image: url('/assets/img/colection.png');
+  background-size: 100% 100%;        /* Faz a imagem cobrir toda a área */
+  min-height: 84.2vh;             /* Garante que ocupe 100% da altura da tela */
   padding: 2rem;                 /* Espaço interno para não colar nas bordas */
-  box-sizing: border-box;
 }
 
 .container {
@@ -15,12 +11,14 @@
   padding: 1rem 2rem;
   margin: 2rem auto;
   max-width: 600px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 h2 {
   font-size: 1.8rem;
+  font-family: 'Rajdhani', sans-serif;
   margin-bottom: 1rem;
+  text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.5);
 }
 
 a {
