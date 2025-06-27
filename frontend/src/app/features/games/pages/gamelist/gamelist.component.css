@@ -1,24 +1,26 @@
 .container {
   background-image: url('/assets/img/background.png');
-  background-size: 100% 100%;        /* Faz a imagem cobrir toda a área */
-  padding: 2rem;                 /* Espaço interno para não colar nas bordas */
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
 }
 
 .container-title {
   text-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.5);
   font-size: 2rem;
-  font-family: 'rubik', sans-serif;
+  font-family: 'Rubik', sans-serif;
   padding-left: 2.5rem;
   color: #ffffff;
 }
 
 .container-list {
   background: linear-gradient(
-  90deg,
-  rgba(40, 34, 65, 0.2) 0%,     /* 0.2 = 20% de opacidade */
-  rgba(52, 189, 173, 0.2) 50%,
-  rgba(78, 173, 199, 0.2) 80%,
-  rgba(230, 181, 126, 0.2) 100%);
+    90deg,
+    rgba(40, 34, 65, 0.2) 0%,
+    rgba(52, 189, 173, 0.2) 50%,
+    rgba(78, 173, 199, 0.2) 80%,
+    rgba(230, 181, 126, 0.2) 100%
+  );
   border-radius: 8px;
   padding: 1rem 2rem;
   margin: 2rem auto;
@@ -35,11 +37,12 @@ a {
   align-items: flex-start;
   background-color: #ffffff;
   border-radius: 8px;
+  flex-wrap: wrap;
 }
 
 .game-item img {
   width: 150px;
-  object-fit: cover; /* Mantém a proporção da imagem */
+  object-fit: cover;
   border-radius: 8px 0 0 8px;
   margin-right: 1.5rem;
 }
@@ -49,6 +52,7 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   padding: 1rem 1rem 0 0;
+  flex: 1;
 }
 
 .game-info h2 {
@@ -74,6 +78,7 @@ li {
   list-style: none;
 }
 
+/* Angular CDK drag-and-drop */
 .cdk-drag-preview {
   border: none;
   box-sizing: border-box;
@@ -82,15 +87,92 @@ li {
               0 8px 10px 1px rgba(0, 0, 0, 0.14),
               0 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
+
 .cdk-drag-placeholder {
   opacity: 0;
 }
+
 .cdk-drag-animating {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
+
 .game-item:last-child {
   border: none;
 }
+
 .container-list.cdk-drop-list-dragging .game-item:not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .container-title {
+    font-size: 1.8rem;
+    padding-left: 1.5rem;
+  }
+
+  .game-item {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .game-item img {
+    width: 120px;
+  }
+
+  .game-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .game-info .desc {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-list {
+    padding: 1rem;
+  }
+
+  .container-title {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    text-align: center;
+  }
+
+  .game-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .game-item img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    margin: 0 0 1rem 0;
+  }
+
+  .game-info {
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  .game-info h2 {
+    font-size: 1.2rem;
+  }
+
+  .game-info .desc {
+    font-size: 0.9rem;
+  }
+
+  .game-info .year {
+    font-size: 0.9rem;
+  }
+
+  li {
+    margin-left: -40px;
+  }
 }
