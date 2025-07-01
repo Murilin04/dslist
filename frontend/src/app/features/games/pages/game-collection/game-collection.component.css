@@ -1,7 +1,7 @@
 .app-container {
   background-image: url('/assets/img/colection.png');
-  background-size: 100% 100%;        /* Faz a imagem cobrir toda a área */
-  min-height: 84.2vh;             /* Garante que ocupe 100% da altura da tela */
+  background-size: cover;        /* Faz a imagem cobrir toda a área */
+  min-height: 100%;             /* Garante que ocupe 100% da altura da tela */
   padding: 2rem;                 /* Espaço interno para não colar nas bordas */
 }
 

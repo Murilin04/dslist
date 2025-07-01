@@ -1,8 +1,8 @@
 .container {
   display: flex;
   background-image: url('/assets/img/background.png');
-  background-size: 100% 100%;
-  min-height: 72.4vh;             /* Garante que ocupe 100% da altura da tela */
+  background-size: cover;
+  min-height: 100%;             /* Garante que ocupe 100% da altura da tela */
   align-items: center;           /* Centraliza verticalmente (opcional) */
   padding: 5rem;                 /* Espaço interno para não colar nas bordas */
 }
